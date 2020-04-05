@@ -89,7 +89,9 @@ public class StoryController {
             return new ResponseEntity<StoryCreateResponse>(HttpStatus.BAD_REQUEST);
         }
         Story story = new Story();
+
         Date currentTime = new Date();
+        
         story.setAuthorUserId(userId);
         story.setTitle(requestBody.getTitle());
         story.setCategoryId(requestBody.getCategoryId());
